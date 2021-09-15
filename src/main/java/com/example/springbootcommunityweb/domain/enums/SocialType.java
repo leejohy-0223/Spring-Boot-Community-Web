@@ -3,7 +3,6 @@ package com.example.springbootcommunityweb.domain.enums;
 public enum SocialType {
 
     FACEBOOK("facebook"),
-
     GOOGLE("google"),
     KAKAO("kakao");
 

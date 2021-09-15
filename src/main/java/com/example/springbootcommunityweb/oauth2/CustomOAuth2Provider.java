@@ -10,7 +10,8 @@ public enum CustomOAuth2Provider {
         @Override
         public ClientRegistration.Builder getBuilder(String registrationId) {
             ClientRegistration.Builder builder = getBuilder(registrationId, ClientAuthenticationMethod.CLIENT_SECRET_POST, DEFAULT_LOGIN_REDIRECT_URL);
-//            builder.scope("profile");
+            builder.scope("profile_nickname", "profile_image", "account_email");
+//            builder.scope("profile", profile_nickname, profile_image, account_email);
             builder.authorizationUri("https://kauth.kakao.com/oauth/authorize");
             builder.tokenUri("https://kauth.kakao.com/oauth/token");
             builder.userInfoUri("https://kapi.kakao.com/v1/user/me");
